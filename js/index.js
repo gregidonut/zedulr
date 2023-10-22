@@ -1,1 +1,3 @@
-console.log("ulol")
+import RunHeaderClock from "./runHeaderClock.js";
+
+RunHeaderClock()
