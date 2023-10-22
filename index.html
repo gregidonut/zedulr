@@ -8,13 +8,23 @@
     </head>
     <body>
         <div id="base-container">
-            <header>
-                <h1>
-                    <a href="/">Zedulr</a>
-                </h1>
-                <p id="header-clock-wrapper"></p>
+            <header id="main-header">
+                <div id="top">
+                    <h1>
+                        <a href="/">Zedulr</a>
+                    </h1>
+                    <p id="header-clock-wrapper"></p>
+                </div>
+                <div id="bottom">
+                    <form id="timeForm">
+                        <label for="timeInput">Start Time:</label>
+                        <input type="time" id="timeInput" name="timeInput">
+                        <input type="button" value="start" onclick="genTodoDeadlines()">
+                    </form>
+                </div>
             </header>
             <main>
+
                 <ul></ul>
             </main>
         </div>

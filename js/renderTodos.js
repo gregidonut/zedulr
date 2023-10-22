@@ -6,9 +6,12 @@ export default function RenderTodos() {
         const baseListITem = document.createElement("li");
         baseListITem.innerHTML = `
 <article>
-    <h3>
-        ${todoData.name}
-    </h3>
+    <header>
+        <h3>
+            ${todoData.name}
+        </h3>
+        <p>do until</p>
+    </header>
     <p>
         ${todoData.currentTask}
     </p>
