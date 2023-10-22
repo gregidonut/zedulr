@@ -95,14 +95,15 @@ main ul li article {
 main ul li article header {
     width: 100%;
     padding: 0.5rem 0;
-    color: grey;
+    color: #5e1515;
 }
 
 main ul li article header h3 {
     width: 100%;
 }
 
-main ul li article p {
+main ul li article>p {
     width: 100%;
     flex-grow: 1;
+    color: antiquewhite;
 }
