@@ -15,12 +15,31 @@ export default function GenTodoDeadlines() {
         hour12: true,
     });
 
-    todoArticleHeaderParagraphs.forEach((pElem) => {
-        const hoursToAddPerTodoItem = WORK_HOURS / todoArticleHeaderParagraphs.length;
-        date.setHours(date.getHours() + hoursToAddPerTodoItem);
+    const deadlines = splitTime(date, WORK_HOURS, todoArticleHeaderParagraphs.length);
 
+    todoArticleHeaderParagraphs.forEach((pElem, index) => {
         pElem.innerHTML = `
-do until <time datetime="${date.toISOString()}">${kitchenTimeFormatter.format(date)}</time>       
+do until 
+    <time datetime="${deadlines[index].toISOString()}">
+        ${kitchenTimeFormatter.format(deadlines[index])}
+    </time>       
 `;
     });
+}
+
+function splitTime(startTime, hoursToBeDivided, howManyParts) {
+    const durationInMilliseconds = hoursToBeDivided * 60 * 60 * 1000; // 12 hours in milliseconds
+    const partDuration = durationInMilliseconds / howManyParts;
+
+    const parts = [];
+
+    for (let i = 0; i < howManyParts; i++) {
+        const partEndTime = new Date(startTime.getTime() + (i + 1) * partDuration);
+
+        parts.push(
+            partEndTime,
+        );
+    }
+
+    return parts;
 }
