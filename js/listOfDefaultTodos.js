@@ -1,10 +1,5 @@
 const DEFAULT_TODOS = [
     {
-        name: "Romer's Project",
-        completedTasks: [],
-        currentTask: "update DOM with more splitVids after scroling to spinner",
-    },
-    {
         name: "Hypermedia Systems",
         completedTasks: [],
         currentTask: "read chapter 1",
@@ -13,6 +8,11 @@ const DEFAULT_TODOS = [
         name: "Javascript.info",
         completedTasks: [],
         currentTask: "review Date and Time (chp 5.11)",
+    },
+    {
+        name: "Romer's Project",
+        completedTasks: [],
+        currentTask: "update DOM with more splitVids after scroling to spinner",
     },
     {
         name: "figma course",
