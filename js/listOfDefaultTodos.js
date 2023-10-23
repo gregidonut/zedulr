@@ -10,6 +10,11 @@ const DEFAULT_TODOS = [
         currentTask: "review Date and Time (chp 5.11)",
     },
     {
+        name: "tailwind book",
+        completedTasks: [],
+        currentTask: "read chapter 1",
+    },
+    {
         name: "Romer's Project",
         completedTasks: [],
         currentTask: "update DOM with more splitVids after scroling to spinner",
