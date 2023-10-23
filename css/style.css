@@ -7,7 +7,7 @@ header#main-header {
     justify-content: space-between;
 
     background: #525252;
-    padding: 0 1.5rem 1.2rem;
+    padding: 1rem
 }
 
 header#main-header div#top {
@@ -18,8 +18,22 @@ header#main-header div#top {
     justify-content: space-between;
 }
 
-header#main-header div#top {
-    width: 100%;
+header#main-header div#top h1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 3rem;
+    text-transform: lowercase;
+}
+
+header#main-header div#top h1 a {
+    color: antiquewhite;
+}
+
+header#main-header div#top h1 img {
+    width: 3rem;
 }
 
 header#main-header div#top p#header-clock-wrapper {
@@ -102,7 +116,7 @@ main ul li article header h3 {
     width: 100%;
 }
 
-main ul li article>p {
+main ul li article > p {
     width: 100%;
     flex-grow: 1;
     color: antiquewhite;
